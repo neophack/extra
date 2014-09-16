@@ -1,0 +1,254 @@
+
+config listen 'listen'
+	option enabled '0'
+	option ip '0.0.0.0'
+	option port '8087'
+	option username ''
+	option password ''
+
+config gae 'gae'
+	option appid ''
+	option password ''
+	option path '/2'
+	option mode 'https'
+	option sslversion 'TLSv1'
+	option profile 'ipv4'
+	option window '4'
+	option keepalive '0'
+	option obfuscate '0'
+	option validate '0'
+	option rc4 '0'
+	option regions ''
+
+config pac 'pac'
+	option enabled '1'
+	option ip '0.0.0.0'
+	option port '8086'
+	option gfwlist 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt'
+	option adblock 'http://adblock-chinalist.googlecode.com/svn/trunk/adblock.txt'
+	option expired '86400'
+	option admode '1'
+
+config proxy 'proxy'
+	option enabled '0'
+	option host ''
+	option port '8080'
+	option username ''
+	option password ''
+
+config useragent 'useragent'
+	option enabled '0'
+	option string 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543a Safari/419.3'
+
+config autorange 'autorange'
+	option hosts '*.c.youtube.com|*.atm.youku.com|*.googlevideo.com|*av.vimeo.com|smile-*.nicovideo.jp|video.*.fbcdn.net|s*.last.fm|x*.last.fm|*.x.xvideos.com|*.edgecastcdn.net|*.d.rncdn3.com|cdn*.public.tube8.com|videos.flv*.redtubefiles.com|cdn*.public.extremetube.phncdn.com|cdn*.video.pornhub.phncdn.com|*.mms.vlog.xuite.net|vs*.thisav.com|archive.rthk.hk|video*.modimovie.com|*.c.docs.google.com'
+	option endswith '.f4v|.flv|.hlv|.m4v|.mp4|.mp3|.ogg|.avi|.exe|.zip|.iso|.rar|.bz2|.xz|.dmg'
+	option noendswith '.xml|.json|.html|.php|.py|.js|.css|.jpg|.jpeg|.png|.gif|.ico|.webp'
+	option threads '3'
+	option maxsize '1048576'
+	option waitsize '524288'
+	option bufsize '8192'
+
+config extern 'extern'
+	option proxy_py '/usr/lib/goagent/proxy.py'
+	option proxy_pac '/usr/lib/goagent/proxy.pac'
+	option dnslib '/usr/lib/goagent/dnslib-0.8.3.egg'
+	option cert '/etc/goagent/CA.crt'
+	option replace_pac '1'
+
+config ipv4http 'ipv4http'
+	option crlfsites 'scholar.google.com|scholar.google.com.hk|.appspot.com'
+	option withgae 'play.google.com|wenda.google.com.hk|clients.google.com|clients1.google.com'
+	option forcehttps '.google.com|.google.com.hk|.googleapis.com|.googleusercontent.com|.youtube.com'
+	option noforcehttps 'scholar.google.com|scholar.google.com.hk'
+	option fakehttps '.google.com|.google.com.hk|.googleapis.com|.googleusercontent.com|.youtube.com'
+	option nofakehttps 'scholar.google.com|scholar.google.com.hk'
+
+config ipv6http 'ipv6http'
+	option dns '2001:4860:4860::8888|2001:4860:4860::8844|2001:470:20::2'
+	option crlfsites '.youtube.com|.google.com'
+	option withgae 'play.google.com'
+	option forcehttps ''
+	option noforcehttps 'scholar.google.com|scholar.google.com.hk'
+	option fakehttps ''
+	option nofakehttps 'scholar.google.com|scholar.google.com.hk'
+
+config iplist
+	option name 'google_cn'
+	option ips 'www.google.cn|www.g.cn'
+
+config iplist
+	option name 'google_hk'
+	option ips 'www.google.com|mail.google.com|www.google.com.hk|www.google.com.tw|www1.l.google.com|www2.l.google.com|www3.l.google.com|www4.l.google.com|www5.l.google.com|www6.l.google.com|www.l.google.com|mail.l.google.com|googleapis.l.google.com|googlecode.l.googleusercontent.com|maps.l.google.com|code.l.google.com'
+
+config iplist
+	option name 'google_talk'
+	option ips 'talk.google.com|talk.l.google.com|talkx.l.google.com'
+
+config iplist
+	option name 'google_ipv6'
+	option ips 'www.google.com|www.google.com.hk'
+
+config ipv4hosts
+	option host 'mtalk.google.com'
+	option ip ''
+
+config ipv4hosts
+	option host 'talk.google.com'
+	option ip 'google_talk'
+
+config ipv4hosts
+	option host 'talk.l.google.com'
+	option ip 'google_talk'
+
+config ipv4hosts
+	option host 'talkx.l.google.com'
+	option ip 'google_talk'
+
+config ipv4hosts
+	option host '1-ps.googleusercontent.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '2-ps.googleusercontent.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '3-ps.googleusercontent.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '4-ps.googleusercontent.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host 'mail.google.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '.google.cn'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '.google.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.google.com.hk'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.googleapis.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.android.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.appspot.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.googletagservices.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.googlegroups.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.googlesource.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.googleusercontent.com'
+	option ip 'google_hk'
+
+config ipv4hosts
+	option host '.google-analytics.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '.googlecode.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '.gstatic.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '.ggpht.com'
+	option ip 'google_cn'
+
+config ipv4hosts
+	option host '.dropbox.com:443'
+
+config ipv4hosts
+	option host '.box.com:443'
+
+config ipv4hosts
+	option host '.copy.com:443'
+
+config ipv4hosts
+	option host 'https?://www\.google\.com(\.[a-z]{2})?/($|(search|url|gen_204)\?|(complete|images)/)'
+	option ip 'google_cn'
+
+config ipv6hosts
+	option host 'talk.google.com'
+
+config ipv6hosts
+	option host 'talk.l.google.com'
+
+config ipv6hosts
+	option host 'talkx.l.google.com'
+
+config ipv6hosts
+	option host '.google.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.google.com.hk'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.googleapis.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.android.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.appspot.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.googlegroups.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.googlesource.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.googleusercontent.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.google-analytics.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.googlecode.com'
+	option ip 'google_ipv6'
+
+config ipv6hosts
+	option host '.dropbox.com:443'
+
+config ipv6hosts
+	option host '.box.com:443'
+
+config ipv6hosts
+	option host '.copy.com:443'
+

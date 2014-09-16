@@ -1,0 +1,16 @@
+<%-
+	local uci = require "luci.model.uci".cursor()
+
+	local value = uci:get("goagent", "ipv6http", "withgae")
+
+	if value == nil then
+		value = "play.google.com"
+	end
+-%>
+<div class="cbi-value cbi-value-last" id="cbi-goagent-ipv6http-withgae"><label class="cbi-value-title" for="cbid.goagent.ipv6http.withgae"><%:Sites using GAE Address%></label>
+	<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" style="width:400px" onchange="cbi_d_update(this.id)" name="cbid.goagent.ipv6http.withgae" id="cbid.goagent.ipv6http.withgae" value="<%=value%>" />
+	
+	</div>
+</div>
